@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Zid - Panel</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-custom-colors.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" type="text/css" href="css/chosen.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style-rtl.css">
+    <link id="dark-style-toggle" rel="stylesheet" type="text/css" href="">
+    <script>
+        var darkmode = localStorage.getItem('zid-panel-darkmode');
+        if(darkmode != "false"){
+            document.getElementById("dark-style-toggle").setAttribute("href", "css/dark-mode.css");
+        }
+    </script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="sidebar-wrapper" class="open">
+        <button class="btn-menu-close"><i class="zid zid-close"></i></button>
+        <div class="sidebar-content">
+            <div class="sidebar-head">
+                <div class="brand"><img src="images/no-logo.png" alt=""><div class="name">اسم المتجر</div></div>
+                <a class="btn-view" href="#"><i class="zid zid-eye"></i>مشاهدة المتجر</a>
+                <a class="btn-edit" href="#"><i class="zid zid-pen"></i>تخصيص الواجهة</a>
+            </div>
+            <div class="sidebar-body">
+                <ul class="main-menu">
+                    <li><a href="index.html"><i class="zid zid-home"></i>الرئيسية</a></li>
+                    <li><a href="reports.html"><i class="zid zid-pie-chart"></i>التقارير</a></li>
+                    <li>
+                        <a data-toggle="collapse" href="#menu-item1" class="collapsed"><i class="zid zid-basket"></i>الطلبات</a>
+                        <div class="collapse" id="menu-item1">
+                            <ul class="sub-menu">
+                                <li><a href="orders.html">الطلبات</a></li>
+                                <li><a href="order.html">إنشاء طلب</a></li>
+                                <li><a href="drafts.html">المسودات</a></li>
+                                <li><a href="order-notifications.html">رسائل حالات الطلبات</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" href="#menu-item2" class="collapsed"><i class="zid zid-apps"></i>المنتجات</a>
+                        <div class="collapse" id="menu-item2">
+                            <ul class="sub-menu">
+                                <li><a href="products.html">جميع المنتجات</a></li>
+                                <li><a href="categories.html">تصنيفات المنتجات</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" href="#menu-item3" class="collapsed"><i class="zid zid-dart-board"></i>التسويق</a>
+                        <div class="collapse" id="menu-item3">
+                            <ul class="sub-menu">
+                                <li><a href="coupons.html">قسائم التخفيض</a></li>
+                                <li><a href="discounts.html">الخصومات التلقائية</a></li>
+                                <li><a href="sms-pricing.html">حملات الرسائل النصية</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="customers.html"><i class="zid zid-user"></i>العملاء</a></li>
+                    <li>
+                        <a data-toggle="collapse" href="#menu-item4" class="collapsed"><i class="zid zid-viral"></i>منظومة زد</a>
+                        <div class="collapse" id="menu-item4">
+                            <ul class="sub-menu">
+                                <li><a href="delivery-options.html">الشحن والتوصيل</a></li>
+                                <li><a href="payment-options.html">الدفع</a></li>
+                                <li><a href="#">إدارة الطلبات والعمليات</a></li>
+                                <li><a href="#">التصوير</a></li>
+                                <li><a href="#">التصميم</a></li>
+                                <li><a href="#">التغليف</a></li>
+                                <li><a href="#">مساحات العمل المشتركة</a></li>
+                                <li><a href="other-services.html">خدمات أخرى</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#"><i class="zid zid-users"></i>فريق العمل</a></li>
+                    <li><a href="settings.html"><i class="zid zid-cogwheel"></i>الإعدادات</a></li>
+                    <li>
+                        <a data-toggle="collapse" href="#menu-item5" class="collapsed"><i class="zid zid-options"></i>خيارات الواجهة</a>
+                        <div class="collapse" id="menu-item5">
+                            <ul class="sub-menu">
+                                <li><a href="catalog-theme.html">تخصيص</a></li>
+                                <li><a href="extra-pages.html">صفحات إضافية</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><button id="btn-mode" class="btn-mode"><i class="zid zid-mode"></i>واجهة ليلية</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="page-content-wrapper">
+        
+        <div class="container-fluid page-head">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-title">طرق الدفع</div>
+                    <ol class="breadcrumb breadcrumb-sm">
+                        <li class="breadcrumb-item"><a href="settings.html">الإعدادات</a></li>
+                        <li class="breadcrumb-item active">طرق الدفع</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid other-content">
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-primary">عند تفعيلك لبوابات الدفع الموضحة ادناه، ستتمكن من ربط متجرك الإلكتروني بإحدى تلك البوابات المختلفة. كل بوابة من البوابات لديها إشتراطات معينة لتفعيل حسابك لديهم. خيارات الدفع تتيح لك استقبال المدفوعات الإلكترونية عبر البطاقات الإئتمانية وبعضهم يدعم خيار: مدى، للدفع الإلكتروني سنقوم بربطك الكترونيًا معهم ولكنك بحاجة أيضًا الى تفعيل اشتراكك لديهم وتعبئة النماذج اللازمة.</div>
+                </div>
+                <div class="col-12">
+                    <div class="other-box extended">
+                        <div class="other-box-head with-border">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="content-title other-color">بوابات الدفع</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="other-box-content">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mini-info-box with-border">
+                                        <span class="featured-badge">الاختيار المفضل</span>
+                                        <i class="zid zid-tap-logo"></i>
+                                        <div class="title">بوابة تاب</div>
+                                        <div class="subtitle">يمكنك تفعيل بوابة تاب للدفع</div>
+                                        <a href="payment-options-tap.html" class="btn btn-primary btn-sm">اضغط لمزيد من التفاصيل</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mini-info-box with-border">
+                                        <i class="fas fa-money-check-alt"></i>
+                                        <div class="title">بوابات دفع أخرى</div>
+                                        <div class="subtitle">من هنا يمكنك تفعيل بوابات أخرى</div>
+                                        <a href="payment-options-gateways.html" class="btn btn-primary btn-sm">اضغط لمزيد من التفاصيل</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="info-with-img">
+                                        <div class="comp-logo-holder"><img class="img" src="images/apple-pay-logo.svg" alt=""></div> <span class="text">يمكنك الان تفعيل Apple Pay في متجرك</span> <a href="payment-options-apple-pay.html" class="btn btn-success btn-sm">اضغط لمعرفة المزيد</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="other-box extended">
+                        <div class="other-box-head with-border">
+                            <div class="row">
+                                <div class="col-6 my-auto">
+                                    <div class="content-title other-color">التحويل البنكي</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="opp-dir">
+                                        <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target="#bankModal">إضافة حساب جديد</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="other-box-content">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="bank-list">
+                                        <div class="row">
+                                            <div class="col-6 my-auto">
+                                                <h6>مصرف الراجحي</h6>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="options opp-dir">
+                                                    <a href="#" class="btn btn-icon-sm" data-toggle="modal" data-target="#bankModal"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a href="#" class="btn btn-icon-sm"><i class="far fa-trash-alt"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="img-with-details">
+                                                    <div class="comp-logo-holder"><img class="img" src="images/al-rajhi.png" alt=""></div>
+                                                    <div class="details">
+                                                        <strong>المالك:</strong>&nbsp;محمد سامي<br>
+                                                        <strong>رقم الحساب:</strong>&nbsp;123456789012345<br>
+                                                        <strong>الأيبان:</strong>&nbsp;SA1234567890123456789011<br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 my-auto">
+                                                <h6>البنك الأهلي التجاري</h6>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="options opp-dir">
+                                                    <a href="#" class="btn btn-icon-sm" data-toggle="modal" data-target="#bankModal"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a href="#" class="btn btn-icon-sm"><i class="far fa-trash-alt"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="img-with-details">
+                                                    <div class="comp-logo-holder"><img class="img" src="images/bank_ahli.png" alt=""></div>
+                                                    <div class="details">
+                                                        <strong>المالك:</strong>&nbsp;متجرر اللبس الجميل للتجارة<br>
+                                                        <strong>رقم الحساب:</strong>&nbsp;123457889<br>
+                                                        <strong>الأيبان:</strong>&nbsp;SA98002876190018718901<br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 my-auto">
+                                                <h6>البنك الأول</h6>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="options opp-dir">
+                                                    <a href="#" class="btn btn-icon-sm" data-toggle="modal" data-target="#bankModal"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a href="#" class="btn btn-icon-sm"><i class="far fa-trash-alt"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="img-with-details">
+                                                    <div class="comp-logo-holder"><img class="img" src="images/bank_holandi.png" alt=""></div>
+                                                    <div class="details">
+                                                        <strong>المالك:</strong>&nbsp;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="32665741467246574146">[email&#160;protected]</a><br>
+                                                        <strong>رقم الحساب:</strong>&nbsp;3456789765437<br>
+                                                        <strong>الأيبان:</strong>&nbsp;Sa5467890-98765435567890<br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="learn-more-btn-holder">
+                        <a href="#" class="btn btn-outline-primary btn-sm">لمعرفة المزيد عن الدفع<i class="fas fa-question"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="copyright">Copyright <b>Zid App</b> © 2016-2020</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal-side-text-align fade" id="bankModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title-sm">أضف حساب بنكي</div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">اسم البنك</label>
+                                        <div class="select-chosen-container select-chosen-container-sm">
+                                            <select data-placeholder="Choose a Bank..." class="chosen-select">
+                                                <option>البنك الأهلي التجاري</option>
+                                                <option>ساب</option>
+                                                <option>البنك السعودي الفرنسي</option>
+                                                <option>البنك الأول</option>
+                                                <option>البنك السعودي للاستثمار</option>
+                                                <option>البنك العربي الوطني</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="input1">رقم الحساب</label>
+                                        <input type="text" class="form-control form-control-sm" id="input1" placeholder="123456789XXXXXX">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="input2">الأيبان</label>
+                                        <input type="text" class="form-control form-control-sm" id="input2" placeholder="SA03 8000 0000 6080 XXXX XXXX">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="input3">اسم المستفيد</label>
+                                        <input type="text" class="form-control form-control-sm" id="input3" placeholder="Name of the account owner">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-accept btn-sm">حفظ</button>
+                        <button type="button" class="btn btn-grey btn-sm" data-dismiss="modal">إغلاق</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/apexcharts.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/chosen.jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $(".chosen-select").chosen();
+</script>
+</body>
+</html>
