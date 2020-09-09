@@ -7,14 +7,12 @@
     <link rel="stylesheet" type="text/css" href="http://brandio.io/works/zid19/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="http://brandio.io/works/zid19/css/bootstrap-rtl.min.css">
     <link rel="stylesheet" type="text/css" href="http://brandio.io/works/zid19/css/bootstrap-custom-colors.css">
-    <link rel="stylesheet" type="text/css" href="http://brandio.io/works/zid19/css/fontawesome-all.min.css">
-    <link rel="stylesheet" type="text/css" href="http://brandio.io/works/zid19/css/slick.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">    <link rel="stylesheet" type="text/css" href="http://brandio.io/works/zid19/css/slick.css">
     <link rel="stylesheet" type="text/css" href="http://brandio.io/works/zid19/css/bootstrap-datepicker.css">
     <link rel="stylesheet" type="text/css" href="http://brandio.io/works/zid19/css/chosen.min.css">
     <link rel="stylesheet" type="text/css" href="http://brandio.io/works/zid19/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://brandio.io/works/zid19/css/style-rtl.css">
-    <link rel="stylesheet" type="text/css" href="http://brandio.io/works/zid19/css/dark-mode.css" v-if='isDarkModeStatus'>
-    
+    <!-- <link rel="stylesheet" type="text/css" href="http://brandio.io/works/zid19/css/dark-mode.css" v-if='isDarkModeStatus'> -->
 </head>
 <body>
   <div id="app">
@@ -38,9 +36,10 @@
             </div>
         </div>
 
+        <PartnersPage></PartnersPage>
 
-        <PaymentMethodPage></PaymentMethodPage>
-    <FooterLayout></FooterLayout>
+        <!-- <PaymentMethodsPage></PaymentMethodsPage> -->
+        <FooterLayout></FooterLayout>
 
     </div>
 
@@ -54,19 +53,22 @@
 import SideBarLayout from './components/Layouts/SideBarLayout'
 import StatusBarLayout from './components/Layouts/StatusBarLayout'
 import FooterLayout from './components/Layouts/FooterLayout'
-import PaymentMethodPage from './components/Pages/PaymentMethodsPage'
+import PartnersPage from './components/Pages/PartnersPage'
+// import PaymentMethodsPage from './components/Pages/PaymentMethodsPage'
+
 export default {
   name: 'App',
   components: {
     StatusBarLayout,
     SideBarLayout,
     FooterLayout,
-    PaymentMethodPage
+    PartnersPage,
+    // PaymentMethodsPage
   },
   data() {
     return {
-      isDarkModeStatus:localStorage.getItem('zid-panel-darkmode') == null ? true : localStorage.getItem('zid-panel-darkmode'),
-      sideBarStatus:localStorage.getItem('zid-sidebar-status') == null ? true : localStorage.getItem('zid-sidebar-status')
+      isDarkModeStatus:localStorage.getItem('zid-panel-darkmode') == null ? false : localStorage.getItem('zid-panel-darkmode'),
+      sideBarStatus:localStorage.getItem('zid-sidebar-status') == null ? false : localStorage.getItem('zid-sidebar-status')
     }
   },
   methods: {
